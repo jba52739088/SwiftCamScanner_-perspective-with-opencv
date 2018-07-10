@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4D5926DCA4059D6DF498AA6 /* Pods_imageEditorWithOpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BD3040291430F6CB897656 /* Pods_imageEditorWithOpenCV.framework */; };
+		FC10273E207125CD00721192 /* CustomTabbarBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10273D207125CD00721192 /* CustomTabbarBtn.swift */; };
+		FC1027402071436C00721192 /* RGBAImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10273F2071436C00721192 /* RGBAImage.swift */; };
+		FC191BA02024BEC50018F618 /* extensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC191B9F2024BEC50018F618 /* extensionUIImage.swift */; };
+		FC191BA32024C5B60018F618 /* cameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC191BA22024C5B60018F618 /* cameraVC.swift */; };
+		FC271300203C6CCA0081F364 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2712FF203C6CCA0081F364 /* SQLiteManager.swift */; };
+		FC271302203D8CC00081F364 /* FileInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC271301203D8CC00081F364 /* FileInfoModel.swift */; };
+		FC271305203D98910081F364 /* webServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC271304203D98910081F364 /* webServiceManager.swift */; };
+		FC394F5720769B1A00106D4F /* updatePwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC394F5620769B1A00106D4F /* updatePwdVC.swift */; };
+		FC6ED68820679BAE002F37E3 /* checkBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC832B2C20678A890075D877 /* checkBox.swift */; };
+		FC6ED68A20679FFC002F37E3 /* indexVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6ED68920679FFC002F37E3 /* indexVC.swift */; };
+		FC832B2E20678B1D0075D877 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC832B2D20678B1D0075D877 /* loginVC.swift */; };
+		FC9C32C0203EFB2B00DFAA77 /* downloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9C32BF203EFB2B00DFAA77 /* downloadCell.swift */; };
+		FC9C32C2203F185F00DFAA77 /* filePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9C32C1203F185F00DFAA77 /* filePageVC.swift */; };
+		FC9C32C620472ED000DFAA77 /* uploadHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9C32C520472ECF00DFAA77 /* uploadHistoryCell.swift */; };
+		FCA476F120E1388E00E53937 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476F020E1388E00E53937 /* Array2D.swift */; };
+		FCA476F320E138C500E53937 /* ByteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476F220E138C500E53937 /* ByteImage.swift */; };
+		FCA476F520E138E700E53937 /* ImageProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476F420E138E700E53937 /* ImageProcess.swift */; };
+		FCB14C66206D1E2C00580307 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB14C65206D1E2C00580307 /* user.swift */; };
+		FCB14C68206D3D1E00580307 /* extensionBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB14C67206D3D1E00580307 /* extensionBtn.swift */; };
+		FCCF29BE2076817A00628955 /* sideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCF29BD2076817A00628955 /* sideMenuVC.swift */; };
+		FCCF29C1207681F300628955 /* sideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCF29C0207681F300628955 /* sideMenuCell.swift */; };
+		FCCF29C320768F4100628955 /* receiverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCF29C220768F4100628955 /* receiverVC.swift */; };
+		FCCF29C520768F7A00628955 /* receiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCF29C420768F7A00628955 /* receiverCell.swift */; };
+		FCE5FADF2095777C003AC5CE /* webServiceManager 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE5FADE2095777C003AC5CE /* webServiceManager 2.swift */; };
+		FCE5FAE120980E02003AC5CE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE5FAE020980E02003AC5CE /* Contact.swift */; };
+		FCE8BA6A201F6B7300D72C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8BA69201F6B7300D72C2E /* AppDelegate.swift */; };
+		FCE8BA6F201F6B7300D72C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE8BA6D201F6B7300D72C2E /* Main.storyboard */; };
+		FCE8BA71201F6B7300D72C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE8BA70201F6B7300D72C2E /* Assets.xcassets */; };
+		FCE8BA74201F6B7300D72C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE8BA72201F6B7300D72C2E /* LaunchScreen.storyboard */; };
+		FCE8BA7C201F704200D72C2E /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8BA7B201F704200D72C2E /* CameraController.swift */; };
+		FCE8BA7E2020C63600D72C2E /* editImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8BA7D2020C63600D72C2E /* editImageVC.swift */; };
+		FCF0ADD1203C2A8C00CACACA /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0ADD0203C2A8C00CACACA /* mainVC.swift */; };
+		FCF0ADD3203C623500CACACA /* uploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0ADD2203C623500CACACA /* uploadVC.swift */; };
+		FCF0ADD5203C624900CACACA /* uploadHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0ADD4203C624900CACACA /* uploadHistoryVC.swift */; };
+		FCF0ADD7203C625F00CACACA /* downloadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0ADD6203C625F00CACACA /* downloadVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0DC1197E67F8ECEDACDCCE68 /* Pods-imageEditorWithOpenCV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imageEditorWithOpenCV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imageEditorWithOpenCV/Pods-imageEditorWithOpenCV.debug.xcconfig"; sourceTree = "<group>"; };
+		49BD3040291430F6CB897656 /* Pods_imageEditorWithOpenCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imageEditorWithOpenCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E6CCF02100253DC6DAC9A2 /* Pods-imageEditorWithOpenCV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imageEditorWithOpenCV.release.xcconfig"; path = "Pods/Target Support Files/Pods-imageEditorWithOpenCV/Pods-imageEditorWithOpenCV.release.xcconfig"; sourceTree = "<group>"; };
+		FC10273D207125CD00721192 /* CustomTabbarBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarBtn.swift; sourceTree = "<group>"; };
+		FC10273F2071436C00721192 /* RGBAImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAImage.swift; sourceTree = "<group>"; };
+		FC191B9F2024BEC50018F618 /* extensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIImage.swift; sourceTree = "<group>"; };
+		FC191BA22024C5B60018F618 /* cameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraVC.swift; sourceTree = "<group>"; };
+		FC2712FF203C6CCA0081F364 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
+		FC271301203D8CC00081F364 /* FileInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInfoModel.swift; sourceTree = "<group>"; };
+		FC271304203D98910081F364 /* webServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webServiceManager.swift; sourceTree = "<group>"; };
+		FC394F5620769B1A00106D4F /* updatePwdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updatePwdVC.swift; sourceTree = "<group>"; };
+		FC6ED68920679FFC002F37E3 /* indexVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = indexVC.swift; sourceTree = "<group>"; };
+		FC832B2C20678A890075D877 /* checkBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBox.swift; sourceTree = "<group>"; };
+		FC832B2D20678B1D0075D877 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
+		FC9C32BF203EFB2B00DFAA77 /* downloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = downloadCell.swift; sourceTree = "<group>"; };
+		FC9C32C1203F185F00DFAA77 /* filePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filePageVC.swift; sourceTree = "<group>"; };
+		FC9C32C520472ECF00DFAA77 /* uploadHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadHistoryCell.swift; sourceTree = "<group>"; };
+		FCA476F020E1388E00E53937 /* Array2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		FCA476F220E138C500E53937 /* ByteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteImage.swift; sourceTree = "<group>"; };
+		FCA476F420E138E700E53937 /* ImageProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcess.swift; sourceTree = "<group>"; };
+		FCB14C65206D1E2C00580307 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		FCB14C67206D3D1E00580307 /* extensionBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionBtn.swift; sourceTree = "<group>"; };
+		FCCF29BD2076817A00628955 /* sideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuVC.swift; sourceTree = "<group>"; };
+		FCCF29C0207681F300628955 /* sideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideMenuCell.swift; sourceTree = "<group>"; };
+		FCCF29C220768F4100628955 /* receiverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = receiverVC.swift; sourceTree = "<group>"; };
+		FCCF29C420768F7A00628955 /* receiverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = receiverCell.swift; sourceTree = "<group>"; };
+		FCE5FADE2095777C003AC5CE /* webServiceManager 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "webServiceManager 2.swift"; sourceTree = "<group>"; };
+		FCE5FAE020980E02003AC5CE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		FCE8BA66201F6B7300D72C2E /* imageEditorWithOpenCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageEditorWithOpenCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE8BA69201F6B7300D72C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCE8BA6E201F6B7300D72C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCE8BA70201F6B7300D72C2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCE8BA73201F6B7300D72C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCE8BA75201F6B7300D72C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCE8BA7B201F704200D72C2E /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		FCE8BA7D2020C63600D72C2E /* editImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editImageVC.swift; sourceTree = "<group>"; };
+		FCF0ADD0203C2A8C00CACACA /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
+		FCF0ADD2203C623500CACACA /* uploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadVC.swift; sourceTree = "<group>"; };
+		FCF0ADD4203C624900CACACA /* uploadHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadHistoryVC.swift; sourceTree = "<group>"; };
+		FCF0ADD6203C625F00CACACA /* downloadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = downloadVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCE8BA63201F6B7300D72C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D5926DCA4059D6DF498AA6 /* Pods_imageEditorWithOpenCV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		352193B922B6FDC430007C5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49BD3040291430F6CB897656 /* Pods_imageEditorWithOpenCV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7A9CA788D997706F5ACA5EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DC1197E67F8ECEDACDCCE68 /* Pods-imageEditorWithOpenCV.debug.xcconfig */,
+				85E6CCF02100253DC6DAC9A2 /* Pods-imageEditorWithOpenCV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC191BA12024BECC0018F618 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				FC10273F2071436C00721192 /* RGBAImage.swift */,
+				FC832B2C20678A890075D877 /* checkBox.swift */,
+				FC191B9F2024BEC50018F618 /* extensionUIImage.swift */,
+				FC271304203D98910081F364 /* webServiceManager.swift */,
+				FCE5FADE2095777C003AC5CE /* webServiceManager 2.swift */,
+				FCB14C67206D3D1E00580307 /* extensionBtn.swift */,
+				FC10273D207125CD00721192 /* CustomTabbarBtn.swift */,
+				FCA476F020E1388E00E53937 /* Array2D.swift */,
+				FCA476F220E138C500E53937 /* ByteImage.swift */,
+				FCA476F420E138E700E53937 /* ImageProcess.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		FC191BA42024C9A90018F618 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8BA7B201F704200D72C2E /* CameraController.swift */,
+				FC2712FF203C6CCA0081F364 /* SQLiteManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		FC271303203D98340081F364 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FC271301203D8CC00081F364 /* FileInfoModel.swift */,
+				FCB14C65206D1E2C00580307 /* user.swift */,
+				FCE5FAE020980E02003AC5CE /* Contact.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FC394F582077227800106D4F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FCCF29C0207681F300628955 /* sideMenuCell.swift */,
+				FCCF29C420768F7A00628955 /* receiverCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		FCA1D26F206FBD9800CB9BAE /* upload */ = {
+			isa = PBXGroup;
+			children = (
+				FCF0ADD2203C623500CACACA /* uploadVC.swift */,
+				FC191BA22024C5B60018F618 /* cameraVC.swift */,
+				FCE8BA7D2020C63600D72C2E /* editImageVC.swift */,
+			);
+			path = upload;
+			sourceTree = "<group>";
+		};
+		FCCF29BF207681C400628955 /* index */ = {
+			isa = PBXGroup;
+			children = (
+				FC832B2D20678B1D0075D877 /* loginVC.swift */,
+				FC6ED68920679FFC002F37E3 /* indexVC.swift */,
+				FCF0ADD0203C2A8C00CACACA /* mainVC.swift */,
+				FCCF29BD2076817A00628955 /* sideMenuVC.swift */,
+				FCCF29C220768F4100628955 /* receiverVC.swift */,
+				FC394F582077227800106D4F /* cell */,
+			);
+			path = index;
+			sourceTree = "<group>";
+		};
+		FCE8BA5D201F6B7300D72C2E = {
+			isa = PBXGroup;
+			children = (
+				FCE8BA68201F6B7300D72C2E /* imageEditorWithOpenCV */,
+				FCE8BA67201F6B7300D72C2E /* Products */,
+				B7A9CA788D997706F5ACA5EF /* Pods */,
+				352193B922B6FDC430007C5A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FCE8BA67201F6B7300D72C2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8BA66201F6B7300D72C2E /* imageEditorWithOpenCV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCE8BA68201F6B7300D72C2E /* imageEditorWithOpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8BA69201F6B7300D72C2E /* AppDelegate.swift */,
+				FCE8BA6D201F6B7300D72C2E /* Main.storyboard */,
+				FCE8BA72201F6B7300D72C2E /* LaunchScreen.storyboard */,
+				FCE8BA70201F6B7300D72C2E /* Assets.xcassets */,
+				FCE8BA75201F6B7300D72C2E /* Info.plist */,
+				FC271303203D98340081F364 /* model */,
+				FC191BA42024C9A90018F618 /* manager */,
+				FC191BA12024BECC0018F618 /* helper */,
+				FCCF29BF207681C400628955 /* index */,
+				FCA1D26F206FBD9800CB9BAE /* upload */,
+				FCF0ADD4203C624900CACACA /* uploadHistoryVC.swift */,
+				FC9C32C520472ECF00DFAA77 /* uploadHistoryCell.swift */,
+				FCF0ADD6203C625F00CACACA /* downloadVC.swift */,
+				FC9C32BF203EFB2B00DFAA77 /* downloadCell.swift */,
+				FC9C32C1203F185F00DFAA77 /* filePageVC.swift */,
+				FC394F5620769B1A00106D4F /* updatePwdVC.swift */,
+			);
+			path = imageEditorWithOpenCV;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCE8BA65201F6B7300D72C2E /* imageEditorWithOpenCV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE8BA78201F6B7300D72C2E /* Build configuration list for PBXNativeTarget "imageEditorWithOpenCV" */;
+			buildPhases = (
+				1DC7A771B7E74D4A389293E9 /* [CP] Check Pods Manifest.lock */,
+				FCE8BA62201F6B7300D72C2E /* Sources */,
+				FCE8BA63201F6B7300D72C2E /* Frameworks */,
+				FCE8BA64201F6B7300D72C2E /* Resources */,
+				552851FA1293949FE1B9F963 /* [CP] Embed Pods Frameworks */,
+				B224EA2981CF207A19BDFE55 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imageEditorWithOpenCV;
+			productName = customCamera;
+			productReference = FCE8BA66201F6B7300D72C2E /* imageEditorWithOpenCV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCE8BA5E201F6B7300D72C2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = ENYUHUANG;
+				TargetAttributes = {
+					FCE8BA65201F6B7300D72C2E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FCE8BA61201F6B7300D72C2E /* Build configuration list for PBXProject "imageEditorWithOpenCV" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCE8BA5D201F6B7300D72C2E;
+			productRefGroup = FCE8BA67201F6B7300D72C2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCE8BA65201F6B7300D72C2E /* imageEditorWithOpenCV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCE8BA64201F6B7300D72C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE8BA74201F6B7300D72C2E /* LaunchScreen.storyboard in Resources */,
+				FCE8BA71201F6B7300D72C2E /* Assets.xcassets in Resources */,
+				FCE8BA6F201F6B7300D72C2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DC7A771B7E74D4A389293E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-imageEditorWithOpenCV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		552851FA1293949FE1B9F963 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-imageEditorWithOpenCV/Pods-imageEditorWithOpenCV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/OpenCV/opencv2.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/StringExtensionHTML/StringExtensionHTML.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCamScanner/SwiftCamScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/opencv2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StringExtensionHTML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCamScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imageEditorWithOpenCV/Pods-imageEditorWithOpenCV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B224EA2981CF207A19BDFE55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imageEditorWithOpenCV/Pods-imageEditorWithOpenCV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCE8BA62201F6B7300D72C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCCF29BE2076817A00628955 /* sideMenuVC.swift in Sources */,
+				FCB14C66206D1E2C00580307 /* user.swift in Sources */,
+				FCF0ADD5203C624900CACACA /* uploadHistoryVC.swift in Sources */,
+				FCF0ADD3203C623500CACACA /* uploadVC.swift in Sources */,
+				FCF0ADD7203C625F00CACACA /* downloadVC.swift in Sources */,
+				FCCF29C520768F7A00628955 /* receiverCell.swift in Sources */,
+				FCA476F320E138C500E53937 /* ByteImage.swift in Sources */,
+				FCE8BA7C201F704200D72C2E /* CameraController.swift in Sources */,
+				FC6ED68820679BAE002F37E3 /* checkBox.swift in Sources */,
+				FCE5FAE120980E02003AC5CE /* Contact.swift in Sources */,
+				FC271305203D98910081F364 /* webServiceManager.swift in Sources */,
+				FC9C32C620472ED000DFAA77 /* uploadHistoryCell.swift in Sources */,
+				FC6ED68A20679FFC002F37E3 /* indexVC.swift in Sources */,
+				FCE8BA7E2020C63600D72C2E /* editImageVC.swift in Sources */,
+				FCB14C68206D3D1E00580307 /* extensionBtn.swift in Sources */,
+				FCA476F520E138E700E53937 /* ImageProcess.swift in Sources */,
+				FC394F5720769B1A00106D4F /* updatePwdVC.swift in Sources */,
+				FC191BA32024C5B60018F618 /* cameraVC.swift in Sources */,
+				FCE8BA6A201F6B7300D72C2E /* AppDelegate.swift in Sources */,
+				FC1027402071436C00721192 /* RGBAImage.swift in Sources */,
+				FCCF29C1207681F300628955 /* sideMenuCell.swift in Sources */,
+				FCA476F120E1388E00E53937 /* Array2D.swift in Sources */,
+				FC271300203C6CCA0081F364 /* SQLiteManager.swift in Sources */,
+				FC832B2E20678B1D0075D877 /* loginVC.swift in Sources */,
+				FC191BA02024BEC50018F618 /* extensionUIImage.swift in Sources */,
+				FCF0ADD1203C2A8C00CACACA /* mainVC.swift in Sources */,
+				FCCF29C320768F4100628955 /* receiverVC.swift in Sources */,
+				FC271302203D8CC00081F364 /* FileInfoModel.swift in Sources */,
+				FCE5FADF2095777C003AC5CE /* webServiceManager 2.swift in Sources */,
+				FC10273E207125CD00721192 /* CustomTabbarBtn.swift in Sources */,
+				FC9C32C0203EFB2B00DFAA77 /* downloadCell.swift in Sources */,
+				FC9C32C2203F185F00DFAA77 /* filePageVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCE8BA6D201F6B7300D72C2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE8BA6E201F6B7300D72C2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCE8BA72201F6B7300D72C2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE8BA73201F6B7300D72C2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCE8BA76201F6B7300D72C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCE8BA77201F6B7300D72C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCE8BA79201F6B7300D72C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC1197E67F8ECEDACDCCE68 /* Pods-imageEditorWithOpenCV.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 284Y9W6F8Y;
+				INFOPLIST_FILE = "/Users/HuangEnYu/Documents/IOS_Project/文件掃描/SwiftCamScanner_ perspective with opencv/imageEditorWithOpenCV/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = enyu.imageEditorWithOpenCV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCE8BA7A201F6B7300D72C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85E6CCF02100253DC6DAC9A2 /* Pods-imageEditorWithOpenCV.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 284Y9W6F8Y;
+				INFOPLIST_FILE = "/Users/HuangEnYu/Documents/IOS_Project/文件掃描/SwiftCamScanner_ perspective with opencv/imageEditorWithOpenCV/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = enyu.imageEditorWithOpenCV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCE8BA61201F6B7300D72C2E /* Build configuration list for PBXProject "imageEditorWithOpenCV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE8BA76201F6B7300D72C2E /* Debug */,
+				FCE8BA77201F6B7300D72C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCE8BA78201F6B7300D72C2E /* Build configuration list for PBXNativeTarget "imageEditorWithOpenCV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE8BA79201F6B7300D72C2E /* Debug */,
+				FCE8BA7A201F6B7300D72C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCE8BA5E201F6B7300D72C2E /* Project object */;
+}

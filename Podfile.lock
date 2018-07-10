@@ -1,0 +1,51 @@
+PODS:
+  - AEXML (4.1.0)
+  - Alamofire (4.5.1)
+  - IQKeyboardManager (5.0.4)
+  - KeychainAccess (3.1.0)
+  - Kingfisher (4.1.1)
+  - OpenCV (3.3.0)
+  - SideMenu (3.1.1)
+  - SQLite.swift (0.11.4):
+    - SQLite.swift/standard (= 0.11.4)
+  - SQLite.swift/standard (0.11.4)
+  - StringExtensionHTML (0.2.0)
+  - SwiftCamScanner (0.2.0):
+    - OpenCV
+  - SwiftyJSON (3.1.4)
+  - SWXMLHash (4.2.3)
+  - XLPagerTabStrip (8.0.0)
+
+DEPENDENCIES:
+  - AEXML
+  - Alamofire (~> 4.5)
+  - IQKeyboardManager
+  - KeychainAccess
+  - Kingfisher (~> 4.0)
+  - OpenCV
+  - SideMenu
+  - SQLite.swift (~> 0.11.4)
+  - StringExtensionHTML
+  - SwiftCamScanner
+  - SwiftyJSON
+  - SWXMLHash
+  - XLPagerTabStrip (~> 8.0)
+
+SPEC CHECKSUMS:
+  AEXML: 647fbb051280f3fb38a1a7caa62b0344055a851c
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  IQKeyboardManager: 1df9c0f147af1681cfb2d9977bc30309d45a7e76
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  Kingfisher: 6793a473357b5dbee42b0068ef203fe8325f259e
+  OpenCV: 9b36d1abdbdbcc6e8cacb6c29d0e6777f87423bb
+  SideMenu: 1bf32e90afaa2dc0e0ab68e938a0ff85014c4217
+  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
+  StringExtensionHTML: 80fdb1b3a83669e371d27bfe2f208f067e2db328
+  SwiftCamScanner: c15df5e700771f0fa8b37162e3e2c084f696faf8
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SWXMLHash: 6ab10e1cb4567d88cd3634be0bf331a7839945dd
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
+
+PODFILE CHECKSUM: f107edabf17e961f3feae66afbf1bbc0ecb1535f
+
+COCOAPODS: 1.4.0
