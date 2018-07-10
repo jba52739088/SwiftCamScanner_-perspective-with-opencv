@@ -10,9 +10,6 @@ import Foundation
 
 import UIKit
 
-/**
- * 1byte크기의 화소 배열로 이뤄진 이미지
- */
 public struct BytePixel {
     private var value: UInt8
     
@@ -41,33 +38,22 @@ public struct ByteImage {
     public var height: Int
     
     public init?(image: UIImage) {
-        // CGImage로 변환이 가능해야 한다.
         guard let cgImage = image.cgImage else {
             return nil
         }
         
-        // 주소 계산을 위해서 Float을 Int로 저장한다.
         width = Int(image.size.width)
         height = Int(image.size.height)
         
-        // 1 * width * height 크기의 버퍼를 생성한다.
         let bytesPerRow = width * 1
         let imageData = UnsafeMutablePointer<BytePixel>.allocate(capacity: width * height)
-        
-        // 색상공간은 Device의 것을 따른다
         let colorSpace = CGColorSpaceCreateDeviceGray()
-        
-        // BGRA로 비트맵을 만든다
         let bitmapInfo: UInt32 = CGBitmapInfo().rawValue
-        // 비트맵 생성
         guard let imageContext = CGContext(data: imageData, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo) else {
             return nil
         }
         
-        // cgImage를 imageData에 채운다.
         imageContext.draw(cgImage, in: CGRect(origin: .zero, size: image.size))
-        
-        // 이미지 화소의 배열 주소를 pixels에 담는다
         pixels = UnsafeMutableBufferPointer<BytePixel>(start: imageData, count: width * height)
     }
     

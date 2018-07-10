@@ -18,15 +18,10 @@ class sideMenuCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    // 切換是否自動列印
+    
     @IBAction func tapSwitchBtn(_ sender: Any) {
         self.appDelegate.isAutoPrint = self.switchBtn.isOn
         self.dafault.set(self.switchBtn.isOn, forKey: "I-Scan-autoPrint")

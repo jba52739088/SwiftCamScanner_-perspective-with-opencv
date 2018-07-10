@@ -21,6 +21,8 @@ class updatePwdVC: UIViewController {
 
         self.title = "變更密碼"
     }
+    
+    // 執行更改密碼
 
     @IBAction func doUpdate(_ sender: Any) {
         guard let newPwd = self.pwdTestField.text,
@@ -33,7 +35,6 @@ class updatePwdVC: UIViewController {
             }else {
                 self.changePassword(account: appdelegate.userAccount, password: newPwd, completionHandler: { (value) in
                     if value {
-//                        self.showError(title: nil, body: "密碼更改成功")
                         let alert = UIAlertController(title: nil, message: "密碼更改成功", preferredStyle: .alert)
                         let action = UIAlertAction(title: "確定", style: .default, handler: { (action) in
                             self.navigationController?.popToRootViewController(animated: true)

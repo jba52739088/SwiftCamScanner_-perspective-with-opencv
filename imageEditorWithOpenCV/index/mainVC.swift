@@ -110,11 +110,6 @@ class mainVC: ButtonBarPagerTabStripViewController {
     
     @objc func autoDownloadFile() {
         self.getFileShouldDownloadData(userID: self.appDelegate.userAccount) {
-//            self.willAutoPrintFile(account: self.appDelegate.userAccount, completionHandler: { (isSucceed) in
-//                if isSucceed {
-//                    print("all is printed")
-//                }
-//            })
             print("15")
         }
     }

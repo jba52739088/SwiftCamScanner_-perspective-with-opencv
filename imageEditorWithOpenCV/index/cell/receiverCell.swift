@@ -21,12 +21,9 @@ class receiverCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-
+    // 切換是否傳送給此聯絡人
+    
     @IBAction func doSwitch(_ sender: Any) {
         guard let thisContact = self.contact else { return }
         if self.switchBtn.isOn {

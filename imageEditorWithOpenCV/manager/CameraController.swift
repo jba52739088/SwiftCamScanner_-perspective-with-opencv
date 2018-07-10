@@ -102,7 +102,6 @@ class CameraController {
             else { throw CameraControllerError.captureSessionIsMissing }
         self.previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-//        self.previewLayer?.videoGravity = AVLayerVideoGravity.resize
         self.previewLayer?.connection?.videoOrientation = .portrait
         
         view.layer.insertSublayer(self.previewLayer!, at: 0)

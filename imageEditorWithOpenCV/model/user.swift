@@ -8,9 +8,3 @@
 
 import Foundation
 
-//class User: NSObject {
-//    var PKey: String
-//    var EmplID: String
-//    var DisplayName: String
-//}
-

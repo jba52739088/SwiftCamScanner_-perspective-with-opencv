@@ -34,6 +34,8 @@ class downloadVC: UIViewController, IndicatorInfoProvider {
         return IndicatorInfo(title: "接收文件")
     }
     
+    // 讀取已下載之檔案及排序
+    
     @objc func loadFiles() {
         print("loadFiles")
         SQLiteManager.shared.loadFiles { (files) in
@@ -49,6 +51,8 @@ class downloadVC: UIViewController, IndicatorInfoProvider {
         }
     }
     
+    // 全部刪除
+    
     @IBAction func deleteAll(_ sender: Any) {
         for file in self.appdelegate.didSelectDownloadedFile {
             self.willDeleteLocalFile(PKey: file.PKey!, completionHandler: { (isSucceed) in
@@ -62,6 +66,8 @@ class downloadVC: UIViewController, IndicatorInfoProvider {
         self.appdelegate.didSelectDownloadedFile = []
         self.loadFiles()
     }
+    
+    
     
     func didClickCheckBox(cell: downloadCell) {
         if cell.checkBoxBtn.isChecked {

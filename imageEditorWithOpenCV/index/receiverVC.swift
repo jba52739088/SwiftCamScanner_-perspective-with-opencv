@@ -29,11 +29,7 @@ class receiverVC: UIViewController {
             self.contactsList = contactsList
             self.tableView.reloadData()
         }
-        
     }
-
-
-
 }
 
 extension receiverVC: UITableViewDelegate, UITableViewDataSource {

@@ -44,10 +44,7 @@ class editImageVC: UIViewController {
         
         let rawImage = RGBAImage(image:image)!
         let _image = ImageProcess.brightness(rawImage, contrast: 1, brightness: 0.25)
-        
-//        self.rawImage = adjustImage(rawImage).toUIImage()!
         self.rawImage = adjustImage(_image).toUIImage()!
-
         let userDisplayName = self.appDelegate.userDisplayName
         let userAccount = self.appDelegate.userAccount
         let sendTime = self.sendTime()
@@ -63,6 +60,8 @@ class editImageVC: UIViewController {
         self.cancelBtn.isTabBarBtn(image: "ic_cancel_white_24dp")
     }
 
+    
+    // 檔案上傳
     
     @IBAction func upload(_ sender: Any) {
         guard let image = self.imageView.image else { return }
@@ -81,10 +80,6 @@ class editImageVC: UIViewController {
                 for contact in contactsList {
                     if contact.isReceiver {
                         self.uploadDataToServer(userID: self.appDelegate.userAccount, data: imageData, strReceiverId: contact.ContactID!, fileName: fileNameString(strReceiverId: contact.ContactID!, date: self.date)) {
-                            // save photo to Album
-                            //                        guard let uploadedImage = UIImage(data: Data(base64Encoded: imageData)!) else { return }
-                            //                        UIImageWriteToSavedPhotosAlbum(uploadedImage, self, nil, nil)
-                            //
                         }
                     }
                     
@@ -100,6 +95,8 @@ class editImageVC: UIViewController {
             }
         }
     }
+    
+    
     
     @IBAction func rePhotoBtn(_ sender: Any) {
         guard let uploadVC = self.parent as? uploadVC else { return }
@@ -127,39 +124,8 @@ class editImageVC: UIViewController {
         return fileString
     }
     
-    func jpegImage(image: UIImage, maxSize: Int, minSize: Int, times: Int) -> Data? {
-        var img = image
-        img = resizeImage(image: img, width: 1654, height: 2339)
-        var maxQuality: CGFloat = 1.0
-        var minQuality: CGFloat = 0.0
-        var bestData: Data? = UIImageJPEGRepresentation(img, 1)
-        var counter: CGFloat = 0
-        while bestData!.count > maxSize {
-            for _ in 1...times {
-                let thisQuality = (maxQuality + minQuality) / 1.1
-                guard let data = UIImageJPEGRepresentation(img, thisQuality) else { return nil }
-                let thisSize = data.count
-                if thisSize > maxSize * 2 {
-                    let i: CGFloat = CGFloat(maxSize) / CGFloat(thisSize)
-                    maxQuality = i
-                }else if thisSize > ((maxSize + minSize) / 2)  {
-                    maxQuality = thisQuality
-                } else {
-                    minQuality = thisQuality
-                    bestData = data
-                    if thisSize > minSize {
-                        return bestData
-                    }
-                }
-                bestData = data
-            }
-            counter += 1
-            if bestData!.count > maxSize {
-                img = resizeImage(image: img, width: 1654 * (1 - (counter / 10)), height: 2339 * (1 - (counter / 10)))
-            }
-        }
-        return bestData
-    }
+    
+    // 更改圖片大小
     
     func resizeImage(image: UIImage, width: CGFloat, height: CGFloat) -> UIImage {
         let targetSize = CGSize(width: width, height: height)
@@ -168,7 +134,6 @@ class editImageVC: UIViewController {
         let widthRatio  = targetSize.width  / size.width
         let heightRatio = targetSize.height / size.height
         
-        // Figure out what our orientation is, and use that to form the rectangle
         var newSize: CGSize
         if(widthRatio > heightRatio) {
             newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
@@ -176,10 +141,8 @@ class editImageVC: UIViewController {
             newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
         }
         
-        // This is the rect that we've calculated out and this is what is actually used below
         let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
         
-        // Actually do the resizing to the rect using the ImageContext stuff
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
         image.draw(in: rect)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -187,6 +150,8 @@ class editImageVC: UIViewController {
         
         return newImage!
     }
+    
+    // 執行二極化
     
     func adjustImage(_ image: RGBAImage) -> RGBAImage {
         var outImage = image
@@ -196,21 +161,18 @@ class editImageVC: UIViewController {
             var totalG:Int = 0
             var totalB:Int = 0
             
-            // 120
             if Int(pixel.R) > 175 {
                 totalR = 255
             }else {
                 totalR = 0
             }
             
-            // 135
             if Int(pixel.G) > 175  {
                 totalG = 255
             }else {
                 totalG = 0
             }
             
-            // 135
             if Int(pixel.B) > 175  {
                 totalB = 255
             }else {
@@ -221,7 +183,6 @@ class editImageVC: UIViewController {
             
             let brad = a << 24 | totalR << 16 | totalG << 8 | totalB
             
-            // 4294967295
             let primary: Int64 = 4294967295
             if brad >= primary {
                 totalR = 255
@@ -243,6 +204,7 @@ class editImageVC: UIViewController {
         return outImage
     }
 
+    // 加上浮水印
     
     func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
         UIGraphicsBeginImageContext(image.size)
@@ -293,6 +255,8 @@ class editImageVC: UIViewController {
         let page = String(count)
         return page.leftPadding(toLength: 4, withPad: "0")
     }
+    
+    // 縮放圖片之手勢
     
     var lastScale:CGFloat!
     @objc func zoom(gesture:UIPinchGestureRecognizer) {

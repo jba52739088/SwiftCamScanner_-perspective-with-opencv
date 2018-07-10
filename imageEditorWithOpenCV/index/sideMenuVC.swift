@@ -69,12 +69,6 @@ extension sideMenuVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             print("是否自動列印")
-//            let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell") as! sideMenuCell
-//            if cell.switchBtn.isOn {
-//                cell.switchBtn.isOn = false
-//            }else {
-//                cell.switchBtn.isOn = true
-//            }
             return
         case 1:
             print("全部刪除")

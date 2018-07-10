@@ -199,21 +199,6 @@ class SQLiteManager{
 
     }
 
-    func clearFiles() {
-//
-//        do{
-//            let drop = fileInfoTable.drop(ifExists: true)
-//            if try db!.run(drop) > 0 {
-//                print("delete a file succeed")
-////                return true
-//            }
-//        } catch {
-//            print("delete a file failed: \(error.localizedDescription)")
-//        }
-    }
-
-
-
     // Contacts
 
     func insertContact(contact: Contact) -> Bool {

@@ -30,6 +30,7 @@ class filePageVC: UIViewController {
         }
     }
     
+    // 點擊列印按鈕
     
     @IBAction func doPrint(_ sender: Any) {
         guard let image = self.imgView.image else { return }
@@ -38,12 +39,11 @@ class filePageVC: UIViewController {
         }
     }
     
+    // 讀取圖片及增加手勢
     
     func loadImgFromFile() {
         guard let file = self.file else { return }
         self.imgView.image = load(fileName: file.FileName!)
-//        let gesture = UIPinchGestureRecognizer(target: self, action: #selector(zoom))
-//        self.imgView.addGestureRecognizer(gesture)
         self.imgView.isUserInteractionEnabled = true
         let zoomGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchHandler))
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
@@ -62,6 +62,8 @@ class filePageVC: UIViewController {
         }
         return nil
     }
+    
+    // 放大圖片之手勢
     
     @objc private func pinchHandler(gesture: UIPinchGestureRecognizer) {
         if let view = gesture.view {
@@ -85,11 +87,12 @@ class filePageVC: UIViewController {
         }
     }
     
+    // 拖移圖片之手勢
+    
     @objc private func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
         if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
             
             let translation = gestureRecognizer.translation(in: self.view)
-            // note: 'view' is optional and need to be unwrapped
             gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x + translation.x, y: gestureRecognizer.view!.center.y + translation.y)
             gestureRecognizer.setTranslation(CGPoint.zero, in: self.view)
         }
@@ -97,6 +100,8 @@ class filePageVC: UIViewController {
 }
 
 extension UIViewController {
+    
+    // 開啟ios列印之功能
     
     func printNow(_ image: UIImage, completionHandler: @escaping () -> Void){
         let controller = UIPrintInteractionController.shared

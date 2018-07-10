@@ -73,7 +73,6 @@ extension uploadVC: UIImagePickerControllerDelegate, UINavigationControllerDeleg
         vc.didMove(toParentViewController: self)
         vc.image = chosenImage
         vc.photoFromCamera = false
-//        vc.beginCropImage(image: vc.image!)
         vc.configureCameraController()
     }
     

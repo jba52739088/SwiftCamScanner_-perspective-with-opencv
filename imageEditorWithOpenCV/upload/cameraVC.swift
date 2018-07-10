@@ -37,7 +37,6 @@ class cameraVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        guard let uploadVC = self.parent as? uploadVC else { return }
         if photoFromCamera {
             self.reCaptureButton.setTitle("重拍", for: .normal)
         }else {
@@ -97,26 +96,7 @@ class cameraVC: UIViewController {
             
             let cropped = CGRect(x: 0, y: 0 , width: image.size.width, height: image.size.width * self.appDelegate.previewViewRatio)
             let croppedImage = self.CropImage(image: image, cropRect: cropped)
-            
-//
-            
-//            let cgImage = self.getCGImageWithCorrectOrientation(image);
-//
-//            let scaledCropArea = CGRect(
-//                x: 0,
-//                y: 0,
-//                width: cgImage.height * 2,
-//                height: cgImage.width
-//            )
-//
-//            let croppedCGImage = cgImage.cropping(to: scaledCropArea)
-//            let croppedImage = UIImage(cgImage: croppedCGImage!, scale: 1, orientation: .up)
-            
-            
-            
-            
             self.beginCropImage(image: croppedImage)
-//            self.beginCropImage(image: image)
         }
     }
     
@@ -150,7 +130,6 @@ class cameraVC: UIViewController {
         self.cropView = CropView(frame: self.capturePreviewView.bounds)
         self.cropView.setUpImage(image: image)
         self.capturePreviewView.addSubview(self.cropView)
-//        self.viewForPhoto.frame = CGRect(x: 0, y: self.view.frame.height, width: self.viewForPhoto.frame.width, height: self.viewForPhoto.frame.height)
         self.viewForPhoto.layer.zPosition = 0
         self.viewForPhoto.isUserInteractionEnabled = false
         self.viewForCrop.layer.zPosition = 1
@@ -161,7 +140,6 @@ class cameraVC: UIViewController {
     private func CropImage( image:UIImage , cropRect:CGRect) -> UIImage
     {
         UIGraphicsBeginImageContextWithOptions(cropRect.size, true, 0);
-//        UIGraphicsBeginImageContextWithOptions(
         let context = UIGraphicsGetCurrentContext();
         
         context?.translateBy(x: 0.0, y: image.size.height);
@@ -174,73 +152,6 @@ class cameraVC: UIViewController {
         
         return croppedImage!;
     }
-    
-//    func getCGImageWithCorrectOrientation(_ image : UIImage) -> CGImage {
-//        if (image.imageOrientation == UIImageOrientation.up) {
-//            return image.cgImage!;
-//        }
-//
-//        var transform : CGAffineTransform = CGAffineTransform.identity;
-//
-//        switch (image.imageOrientation) {
-//        case UIImageOrientation.right, UIImageOrientation.rightMirrored:
-//            transform = transform.translatedBy(x: 0, y: image.size.height);
-//            transform = transform.rotated(by: CGFloat(-1.0 * M_PI_2));
-//            break;
-//        case UIImageOrientation.left, UIImageOrientation.leftMirrored:
-//            transform = transform.translatedBy(x: image.size.width, y: 0);
-//            transform = transform.rotated(by: CGFloat(M_PI_2));
-//            break;
-//        case UIImageOrientation.down, UIImageOrientation.downMirrored:
-//            transform = transform.translatedBy(x: image.size.width, y: image.size.height);
-//            transform = transform.rotated(by: CGFloat(M_PI));
-//            break;
-//        default:
-//            break;
-//        }
-//
-//        switch (image.imageOrientation) {
-//        case UIImageOrientation.rightMirrored, UIImageOrientation.leftMirrored:
-//            transform = transform.translatedBy(x: image.size.height, y: 0);
-//            transform = transform.scaledBy(x: -1, y: 1);
-//            break;
-//        case UIImageOrientation.downMirrored, UIImageOrientation.upMirrored:
-//            transform = transform.translatedBy(x: image.size.width, y: 0);
-//            transform = transform.scaledBy(x: -1, y: 1);
-//            break;
-//        default:
-//            break;
-//        }
-//
-//        let contextWidth : Int;
-//        let contextHeight : Int;
-//
-//        switch (image.imageOrientation) {
-//        case UIImageOrientation.left, UIImageOrientation.leftMirrored,
-//             UIImageOrientation.right, UIImageOrientation.rightMirrored:
-//            contextWidth = (image.cgImage?.height)!;
-//            contextHeight = (image.cgImage?.width)!;
-//            break;
-//        default:
-//            contextWidth = (image.cgImage?.width)!;
-//            contextHeight = (image.cgImage?.height)!;
-//            break;
-//        }
-//
-//        let context : CGContext = CGContext(data: nil, width: contextWidth, height: contextHeight,
-//                                            bitsPerComponent: image.cgImage!.bitsPerComponent,
-//                                            bytesPerRow: image.cgImage!.bytesPerRow,
-//                                            space: image.cgImage!.colorSpace!,
-//                                            bitmapInfo: image.cgImage!.bitmapInfo.rawValue)!;
-//
-//        context.concatenate(transform);
-//        context.draw(image.cgImage!, in: CGRect(x: 0, y: 0, width: CGFloat(contextWidth), height: CGFloat(contextHeight)));
-//
-//        let cgImage = context.makeImage();
-//
-//        return cgImage!;
-//    }
-
 }
 
 extension cameraVC: IndicatorInfoProvider {
